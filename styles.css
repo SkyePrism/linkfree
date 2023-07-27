@@ -16,7 +16,8 @@ body, html {
   border: 2px solid black;
   padding: 20px;
   background-size: 100% 100%;
-  background: linear-gradient(0deg, #ffc0cb, #f3a7ba, #e88fac, #dc79a1, #d16598, #c55291, #ba408c, #ae3188, #a32286, #971684, #8c0b82, #800180);
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 h1, h2{
