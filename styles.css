@@ -1,0 +1,53 @@
+body, html {
+  background-color: #333333;
+  height: 100%;
+  margin: 0;
+}
+
+.main{
+  height: 100%;
+  display: flex;
+}
+
+.box {
+  min-width: 70vw;
+  margin:auto;
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 20px;
+  background-size: 100% 100%;
+  background-image: linear-gradient(purple, pink);
+}
+
+
+h1, h2{
+  font-family: Helvetica;
+  text-align: center;
+}
+
+a:link { text-decoration: none; 
+color: black;}
+
+a:visited { text-decoration: none; 
+color: black;}
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.image{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+  border-radius: 50%; /*don't forget prefixes*/
+  background-image: url("/pfp.png");
+  background-position: center center;
+  /* as mentioned by Vad: */
+  background-size: cover;
+}
+@media (min-width: 600px) {
+  .box {
+    min-width: 400px;
+    }
+}
