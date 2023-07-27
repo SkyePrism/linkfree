@@ -35,6 +35,10 @@ a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
 
+h2:nth-of-type(2n){
+    color:grey;
+}
+
 .image{
   width: 150px;
   height: 150px;
