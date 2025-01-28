@@ -1,7 +1,8 @@
 body, html {
-  background-color: #333333;
+  background-color: #111111;
   height: 100%;
   margin: 0;
+  color: white;
 }
 
 .main{
@@ -11,22 +12,43 @@ body, html {
 
 .box {
   min-width: 70vw;
+  overflow: hidden;
   margin:auto;
   border-radius: 25px;
-  border: 2px solid black;
+  border: 2px solid pink;
   padding: 20px;
   background-size: 100% 100%;
   background: rgb(238,174,202);
-  background: radial-gradient(circle at 50% 20%, #eeaeca, #eeacd5, #eda9e0, #eda7ec, #e0a4ec, #d1a2ec, #c2a0eb, #b39deb, #a29bea, #99a0ea, #96ade9, #94bbe9);
+  background: radial-gradient(circle at 50% 20%, #add8e6, #ffffff, #ffc0cb);
+}
+
+.scrollbar {
+  overflow-y: scroll; /* Enable vertical scrolling */
+  max-height: 70vh;
+  scrollbar-color: gray transparent;
 }
 
 h1, h2{
   font-family: Helvetica;
   text-align: center;
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
 }
 
-h2:nth-of-type(2n){
-    color: #333333;
+/* Every 1st and 5th h2 (lightblue) */
+h2:nth-of-type(5n + 1),
+h2:nth-of-type(5n + 5) {
+  color: lightblue;
+}
+
+/* Every 2nd and 4th h2 (pink) */
+h2:nth-of-type(5n + 2),
+h2:nth-of-type(5n + 4) {
+  color: pink;
+}
+
+/* Every 3rd h2 (white) */
+h2:nth-of-type(5n + 3) {
+  color: white;
 }
 
 a:link,
@@ -43,12 +65,14 @@ a:active {
   height: 150px;
   display: block;
   margin: auto;
+  border: 3px solid #000000;
   border-radius: 50%; /*don't forget prefixes*/
-  background-image: url("/pfp.png");
+  background-image: url("./pfp.png");
   background-position: center center;
   /* as mentioned by Vad: */
   background-size: cover;
 }
+
 @media (min-width: 600px) {
   .box {
     min-width: 400px;
